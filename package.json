@@ -1,5 +1,5 @@
 {
-  "name": "uoc-boilerplate",
+  "name": "pac2",
   "version": "3.7.0",
   "private": true,
   "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
@@ -9,7 +9,8 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean stylelint parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "stylelint": "stylelint src/**/*.scss"
   },
   "web": "dist/index.html",
   "targets": {
@@ -26,8 +27,8 @@
     "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
   },
   "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
+    "name": "Roser Fuster Bertomeu",
+    "email": "rfusterb@uoc.edu"
   },
   "license": "MIT",
   "bugs": {
@@ -42,9 +43,13 @@
     "postcss-preset-env": "^9.1.1",
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.1",
-    "sharp": "0.31.1"
+    "sharp": "0.31.1",
+    "stylelint-config-standard-scss": "^11.1.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
     "stylelint": "^15.11.0"
   }
 }
