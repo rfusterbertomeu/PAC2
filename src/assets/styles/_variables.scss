@@ -1,10 +1,13 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
-  "Helvetica Neue", arial, sans-serif, "apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+$mq-max-mobile-width: 767px;
+$mq-min-tablet-width: 768px;
+$mq-max-tablet-width: 1023px;
+$mq-min-desktop-width: 1024px;
+$font-title: 'Outfit Variable', sans-serif;
+$font-text: 'Montserrat Variable', sans-serif;
 $uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-$mq-min-width: 420px;
+$primary-color: #be9bff;
+$secondary-color: #4c177a;
+$subtitle-color: color.adjust(#000, $lightness: 50%);
+$bg-color-primary: color.scale($primary-color, $lightness: 80%);
