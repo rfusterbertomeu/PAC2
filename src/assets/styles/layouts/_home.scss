@@ -23,3 +23,9 @@ main {
   margin: 0;
   position: relative;
 }
+
+@supports (display: oklch) {
+  body {
+    background-color: $bg-color-primary-p3;
+  }
+}

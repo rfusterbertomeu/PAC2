@@ -5,4 +5,10 @@
         color: #fff;
         background-color: $uoc-corporate;
     }
+
+    @supports (display: oklch) {
+        &__seccio--uoc {
+            background-color: $uoc-corporate-p3;
+        }
+    }
 }
