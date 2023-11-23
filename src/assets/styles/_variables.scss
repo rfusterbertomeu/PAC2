@@ -11,7 +11,6 @@ $primary-color: #be9bff;
 $secondary-color: #4c177a;
 $subtitle-color: color.adjust(#000, $lightness: 50%);
 $bg-color-primary: color.scale($primary-color, $lightness: 80%);
-
 $uoc-corporate-p3: oklch(28.3% 0.163 275.1 / 87.46%);
 $primary-color-p3: oklch(71.96% 0.1608 299.07);
 $secondary-color-p3: oklch(34.84% 0.155 303.22);

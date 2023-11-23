@@ -1,6 +1,5 @@
 html {
-  box-sizing: border-box;
-  height: 100%;
+  min-height: 100%;
 }
 
 *,
@@ -17,11 +16,16 @@ body {
   background-color: $bg-color-primary;
   color: $uoc-corporate;
 }
-
+header {
+  min-height: 10vh;
+}
 main {
-  width: 100%;
-  margin: 0;
-  position: relative;
+  width: 100vw;
+  min-height: 60vh;
+}
+
+footer {
+  height: 30vh;
 }
 
 @supports (display: oklch) {
