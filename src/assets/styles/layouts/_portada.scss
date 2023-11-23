@@ -35,6 +35,7 @@
     }
   }
 }
+
 @supports (display: grid) {
   .portada {
     padding: 0;
@@ -50,14 +51,16 @@
       color: #fff;
       text-align: center;
     }
+
     &__text {
       background: rgb(255 255 255 / 70%);
     }
 
     @supports (display: oklch) {
       &__text {
-        background: oklch(255 255 255 / 0.7);
+        background: oklch(255 255 255deg / 60%);
       }
+
       &__enllac-form,
       &__enllac-info {
         background: $secondary-color-p3;

@@ -1,0 +1,33 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .reticula {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .participante {
+      flex: 1 1 calc(33.333% - 20px); /* 33.333% de ancho con 20px de espacio entre elementos */
+      max-width: calc(33.333% - 20px);
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    .imagen {
+      width: 100%;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    h2, p {
+      margin: 0;
+    }
