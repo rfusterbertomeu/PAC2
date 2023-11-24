@@ -26,13 +26,29 @@
 
   &__enllac-form,
   &__enllac-info {
-    color: #000;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    margin-block: 1rem;
+    background: $secondary-color;
+    color: #fff;
   }
 
   @supports (display: oklch) {
     &__subtitol {
       color: $subtitle-color-p3;
     }
+  }
+}
+
+@supports (display: oklch) {
+  .portada__text {
+    background: oklch(255 255 255deg / 60%);
+  }
+
+  .portada__enllacform,
+  .portada__enllacinfo {
+    background: $secondary-color-p3;
+    color: #fff;
   }
 }
 
@@ -48,23 +64,11 @@
       padding-block: 1rem;
       padding-inline: 1rem;
       background: $secondary-color;
-      color: #fff;
       text-align: center;
     }
 
     &__text {
       background: rgb(255 255 255 / 70%);
-    }
-
-    @supports (display: oklch) {
-      &__text {
-        background: oklch(255 255 255deg / 60%);
-      }
-
-      &__enllac-form,
-      &__enllac-info {
-        background: $secondary-color-p3;
-      }
     }
 
     @media (min-width: $mq-min-desktop-width) {
@@ -212,6 +216,7 @@
       &__enllac-info {
         grid-column: 5;
         grid-row: 3;
+        margin-block: 0.1rem;
       }
     }
   }

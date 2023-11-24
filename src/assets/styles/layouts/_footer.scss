@@ -1,12 +1,24 @@
 .footer {
-    &__seccio--uoc {
-        color: #fff;
-        background-color: $uoc-corporate;
-    }
+  &__imatge {
+    width: 20vw;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    @supports (display: oklch) {
-        &__seccio--uoc {
-            background-color: $uoc-corporate-p3;
-        }
-    }
+  &__credits {
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.7em;
+  }
+
+  &__seccio--uoc {
+    color: #fff;
+    background-color: $uoc-corporate;
+  }
+}
+
+@supports (display: oklch) {
+  .footer__seccio--uoc {
+    background-color: $uoc-corporate-p3;
+  }
 }
