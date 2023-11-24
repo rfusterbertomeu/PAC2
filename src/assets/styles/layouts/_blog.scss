@@ -1,8 +1,10 @@
 .blog {
   display: none;
-
+  container: blog / inline-size;
+  
   &__container {
-    max-width: 50vw;
+    container: contenidor / inline-size;
+    max-width: 75vw;
     margin-inline: 0;
     margin-block: auto;
   }
@@ -10,40 +12,54 @@
   &__titol {
     font-size: calc(1em + 1vw);
     color: $secondary-color;
-    margin: 0;
+    line-height: 1em;
   }
 
   &__text {
     text-align: justify;
   }
 
-  &__blockquote {
-    border-left: 2px solid #333;
-    padding-left: 15px;
-    color: $secondary-color;
-    margin: 0;
+  &__seccio:first-child{
+    display: flex;
+    flex-direction: row;
+    gap: 5cqi;
   }
 
-  &__ul {
-    list-style-type: disc;
-    padding-left: 20px;
+  :is(&__seccio,&__llista ) {
+    margin-block: 1rem;
+    padding-inline: 10cqi;
   }
 
-  :is(h1, h2, h3, h4, h5, h6) {
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  :is(img) {
-    max-width: 100%;
+  :is(&__capcalera,&__imatge) {
+    width: 100cqi;
     height: 100%;
     object-fit: contain;
     margin-bottom: 15px;
   }
 }
-
+  
 @supports (display: oklch) {
   .blog__blockquote {
     color: $secondary-color-p3;
+  }
+}
+
+@supports (contain: layout) {
+  @container blog (min-width: 994px) {
+    .blog__container {
+      width: 50cqw;
+    }
+  }
+
+  @container blog (min-width: 738px) and (max-width: 993px) {
+    .blog__container {
+      width: 75cqw;
+    }
+  }
+
+  @container blog (max-width: 737px) {
+    .blog__container {
+      width: 90cqw;
+    }
   }
 }
