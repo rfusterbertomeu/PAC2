@@ -28,9 +28,3 @@ main {
 footer {
   height: 30vh;
 }
-
-@supports (display: oklch) {
-  body {
-    background-color: $bg-color-primary-p3;
-  }
-}

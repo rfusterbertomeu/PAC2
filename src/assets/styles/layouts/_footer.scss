@@ -16,9 +16,3 @@
     background-color: $uoc-corporate;
   }
 }
-
-@supports (display: oklch) {
-  .footer__seccio--uoc {
-    background-color: $uoc-corporate-p3;
-  }
-}

@@ -1,3 +1,48 @@
 <div class="contacte pagina" id="contacte">
-  <p>This is a contact form</p>
+  <div class="contacte__container">
+    <div class="contacte__formulari">
+      <h1 class="contacte__titol">Contacta amb nosaltres!</h1>
+      <form class="contacte__form" action="#" method="post">
+        <div class="contacte__camp form-floating mb-3">
+          <input type="text" class="form-control" id="form__nom" required>
+          <label for="form__nom">Nom i cognoms</label></div>
+        <div class="contacte__camp form-floating mb-3">
+          <input type="email" class="form-control" id="form__mail" required>
+          <label for="form__mail">Correu electrònic</label>
+        </div>
+        
+        <div class="contacte__camp form-floating  mb-3">
+          <select class="form-select" id="form__select" aria-label="Floating label select example">
+            <option selected>Tria una o varies opcions</option>
+            <option value="1">Tornejos</option>
+            <option value="2">Classes i entrenaments</option>
+            <option value="3">Lliga juvenil</option>
+            <option value="4">Activitats extra</option>
+            <option value="5">Altres..</option>
+          </select>
+          <label for="form__select">La meua consulta tracta sobre...</label>
+        </div>      
+        <div class="contacte__camp form-floating  mb-3">
+          <textarea class="form-control" aria-label="Escriu-nos alguna cosa.."  id="form__text"></textarea>
+        <label for="form__text">Missatge</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="info" id="check__info">
+          <label class="form-check-label" for="check__info">
+            Subscriu-te i reb totes les novetats al correu electrònic!
+          </label>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Enviar</button>
+      </form>
+    </div>
+
+    <div class="contacte__ubicacio">
+      <h1 class="contacte__titol">On pots trobar-nos?</h1>
+      <p class="contacte__text">Dirección: Calle Ejemplo, Ciudad</p>
+      <p class="contacte__text">Teléfono: +34 123 456 789</p>
+
+        <div  class="contacte__mapa" id="map">
+      </div>
+    </div>
+  </div>
 </div>

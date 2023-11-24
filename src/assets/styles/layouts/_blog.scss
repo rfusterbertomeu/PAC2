@@ -1,7 +1,7 @@
 .blog {
   display: none;
   container: blog / inline-size;
-  
+
   &__container {
     container: contenidor / inline-size;
     max-width: 75vw;
@@ -37,12 +37,6 @@
     margin-bottom: 15px;
   }
 }
-  
-@supports (display: oklch) {
-  .blog__blockquote {
-    color: $secondary-color-p3;
-  }
-}
 
 @supports (contain: layout) {
   @container blog (min-width: 994px) {
@@ -60,6 +54,9 @@
   @container blog (max-width: 737px) {
     .blog__container {
       width: 90cqw;
+    }
+    .blog__seccio:first-child{
+      flex-direction: column;
     }
   }
 }

@@ -20,41 +20,21 @@
   margin-block: 0.5rem;
 }
 
-@media (min-width: $mq-min-desktop-width) {
+@container participants (min-width: 994px) {
   .participant {
-    flex-basis: 30%;
+    flex-basis: 30cqw;
   }
 }
 
-@media (min-width: $mq-min-tablet-width) and (max-width: $mq-max-tablet-width) {
+@container participants (min-width: 738px) and (max-width: 993px) {
   .participant {
-    flex-basis: 48%;
+    flex-basis: 40cqw;
   }
 }
 
-@media (max-width: $mq-max-mobile-width) {
+@container participants (max-width: 737px) {
   .participant {
-    flex-basis: 100%;
-    margin-inline: 0;
+    flex-basis: 100cqw;
   }
 }
 
-@supports (contain: layout) {
-  @container participants (min-width: 994px) {
-    .participant {
-      flex-basis: 30cqw;
-    }
-  }
-
-  @container participants (min-width: 738px) and (max-width: 993px) {
-    .participant {
-      flex-basis: 40cqw;
-    }
-  }
-
-  @container participants (max-width: 737px) {
-    .participant {
-      flex-basis: 100cqw;
-    }
-  }
-}

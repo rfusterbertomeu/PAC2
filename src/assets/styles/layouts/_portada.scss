@@ -1,4 +1,5 @@
 .portada {
+  container: portada / inline-size;
   padding-inline: 3rem;
   padding-block: 5rem;
   text-align: justify;
@@ -32,29 +33,10 @@
     background: $secondary-color;
     color: #fff;
   }
-
-  @supports (display: oklch) {
-    &__subtitol {
-      color: $subtitle-color-p3;
-    }
-  }
-}
-
-@supports (display: oklch) {
-  .portada__text {
-    background: oklch(255 255 255deg / 60%);
-  }
-
-  .portada__enllacform,
-  .portada__enllacinfo {
-    background: $secondary-color-p3;
-    color: #fff;
-  }
 }
 
 @supports (display: grid) {
   .portada {
-    padding: 0;
     position: relative;
     max-width: none;
     display: grid;
@@ -63,6 +45,7 @@
     &__enllac-info {
       padding-block: 1rem;
       padding-inline: 1rem;
+      margin-block: 0;
       background: $secondary-color;
       text-align: center;
     }
@@ -71,7 +54,7 @@
       background: rgb(255 255 255 / 70%);
     }
 
-    @media (min-width: $mq-min-desktop-width) {
+    @container portada (min-width: 1024px) {
       grid-template-columns:
         1fr fit-content(10em) fit-content(10em) minmax(1em, 1fr) fit-content(15em) minmax(1em, 1fr) minmax(
           10em,
@@ -80,21 +63,21 @@
         calc(2em + 0.5vw);
       grid-template-rows: 3rem repeat(2, 15vh) repeat(2, 10vh) calc(2em + 0.5vh);
 
-      &__titol {
+      .portada__titol {
         grid-column: 4 / 6;
         grid-row: 1 / 2;
         padding-left: 0.25em;
         margin-bottom: initial;
       }
 
-      &__subtitol {
+      .portada__subtitol {
         grid-column: 4 / 6;
         grid-row: 6;
         margin-bottom: initial;
         text-align: center;
       }
 
-      &__text {
+      .portada__text {
         padding-block: 1rem;
         padding-inline: 1rem;
         grid-column: 5 / 6;
@@ -102,24 +85,24 @@
         z-index: 2;
       }
 
-      &__imatge {
+      .portada__imatge {
         grid-column: 6 / 9;
         grid-row: 2 / 7;
         z-index: 1;
       }
 
-      &__enllac-form {
+      .portada__enllac-form {
         grid-column: 2 / 3;
         grid-row: 4;
       }
 
-      &__enllac-info {
+      .portada__enllac-info {
         grid-column: 3 / 4;
         grid-row: 5;
       }
     }
 
-    @media (min-width: $mq-min-tablet-width) and (max-width: $mq-max-tablet-width) {
+    @container portada (min-width:768px) and (max-width: 1023px) {
       grid-template-columns:
         calc(2em + 0.5vw) fit-content(10em) fit-content(10em) minmax(3em, 1fr) minmax(1em, 1fr) fit-content(10em)
         minmax(1em, 1fr) calc(2em + 0.5vw);
@@ -130,21 +113,21 @@
         )
         minmax(1em, 1fr);
 
-      &__titol {
+      .portada__titol {
         grid-column: 3 / 8;
         grid-row: 2 / 3;
         padding-left: 0.25em;
         margin-bottom: initial;
       }
 
-      &__subtitol {
+      .portada__subtitol {
         grid-column: 3 / 8;
         grid-row: 8;
         margin-bottom: initial;
         text-align: right;
       }
 
-      &__text {
+      .portada__text {
         padding-block: 1rem;
         padding-inline: 1rem;
         grid-column: 4 / 7;
@@ -152,31 +135,31 @@
         z-index: 2;
       }
 
-      &__imatge {
+      .portada__imatge {
         grid-column: 5 / 8;
         grid-row: 2 / 8;
         z-index: 1;
       }
 
-      &__enllac-form {
+      .portada__enllac-form {
         grid-column: 2 / 3;
         grid-row: 5;
       }
 
-      &__enllac-info {
+      .portada__enllac-info {
         grid-column: 3 / 4;
         grid-row: 6;
       }
     }
 
-    @media (max-width: $mq-max-mobile-width) {
+    @container portada (max-width: 767px) {
       grid-template-columns: minmax(3em, 1fr) fit-content(10em) minmax(3em, 1fr) minmax(1em, 1fr) fit-content(10em) minmax(
           1em,
           1fr
         );
       grid-template-rows: repeat(4, 10vh) minmax(1em, 1fr) fit-content(10em) minmax(2rem, min-content);
 
-      &__titol {
+      .portada__titol {
         grid-column: 2 / 6;
         grid-row: 1;
         padding-left: 0.25em;
@@ -184,7 +167,7 @@
         text-align: center;
       }
 
-      &__subtitol {
+      .portada__subtitol {
         grid-column: 2 / 6;
         grid-row: 6;
         margin-bottom: initial;
@@ -193,7 +176,7 @@
         text-align: center;
       }
 
-      &__text {
+      .portada__text {
         padding-block: 1rem;
         padding-inline: 1rem;
         grid-column: 2 / 6;
@@ -201,19 +184,19 @@
         z-index: 2;
       }
 
-      &__imatge {
+      .portada__imatge {
         grid-column: 3 / 6;
         grid-row: 4 / 7;
         z-index: 1;
       }
 
-      &__enllac-form {
+      .portada__enllac-form {
         grid-column: 2;
         grid-row: 2;
         margin-block: 0.1rem;
       }
 
-      &__enllac-info {
+      .portada__enllac-info {
         grid-column: 5;
         grid-row: 3;
         margin-block: 0.1rem;
