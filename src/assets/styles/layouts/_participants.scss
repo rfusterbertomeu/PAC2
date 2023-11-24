@@ -1,33 +1,61 @@
+.participants {
+  display: none;
+  align-items: center;
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+  &__titol {
+    text-align: center;
+    font-size: calc(1em + 2vw);
+  }
 
-    .reticula {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+  &__contenidor {
+    container: participants / inline-size;
+    width: calc(100% - 30px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
-    .participante {
-      flex: 1 1 calc(33.333% - 20px); /* 33.333% de ancho con 20px de espacio entre elementos */
-      max-width: calc(33.333% - 20px);
-      background-color: #f0f0f0;
-      padding: 15px;
-      border-radius: 8px;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-    }
+.participant {
+  margin-inline: 1rem;
+  margin-block: 0.5rem;
+}
 
-    .imagen {
-      width: 100%;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
+@media (min-width: $mq-min-desktop-width) {
+  .participant {
+    flex-basis: 30%;
+  }
+}
 
-    h2, p {
-      margin: 0;
+@media (min-width: $mq-min-tablet-width) and (max-width: $mq-max-tablet-width) {
+  .participant {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: $mq-max-mobile-width) {
+  .participant {
+    flex-basis: 100%;
+    margin-inline: 0;
+  }
+}
+
+@supports (contain: layout) {
+  @container participants (min-width: 994px) {
+    .participant {
+      flex-basis: 30cqw;
     }
+  }
+
+  @container participants (min-width: 738px) and (max-width: 993px) {
+    .participant {
+      flex-basis: 40cqw;
+    }
+  }
+
+  @container participants (max-width: 737px) {
+    .participant {
+      flex-basis: 100cqw;
+    }
+  }
+}

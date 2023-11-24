@@ -9,17 +9,28 @@ import * as bootstrap from 'bootstrap'
 /**
  * Write any other JavaScript below
  */
-const enllac = document.querySelector(".nav-link");
+const enllac_header = document.getElementsByClassName("header__enllac");
+const enllac_footer = document.getElementsByClassName("footer__enllac");
 
-enllac.addEventListener("click", function() {
-  const target = enllac.getAttribute('data-target');
-  mostra(target);
+Array.from(enllac_header).forEach(function (enllac) {
+  enllac.addEventListener('click', function () {
+    const target = enllac.getAttribute('data-target');
+    mostra(target);
+  });
+});
+Array.from(enllac_footer).forEach(function (enllac) {
+  enllac.addEventListener('click', function () {
+    const target = enllac.getAttribute('data-target');
+    mostra(target);
+  });
 });
 
 function mostra(id) {
-  document.querySelectorAll('.pagina').forEach(function(pagina) {
+  console.log(id);
+  document.querySelectorAll('.pagina').forEach(function (pagina) {
     pagina.style.display = 'none';
   });
 
-  document.getElementById(id).style.display = 'block';
+  document.getElementById(id).style.display = 'flex';
+  document.getElementById(id).style.flexDirection = 'column';
 }
