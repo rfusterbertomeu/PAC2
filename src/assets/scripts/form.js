@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 $(document).ready(function () {
   $(".alert").hide();
   $(".formulari__contacte").submit(function (event) {

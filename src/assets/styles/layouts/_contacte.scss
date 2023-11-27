@@ -1,7 +1,8 @@
 @layer base {
   .contacte {
-    display: none;
     container: contacte / inline-size;
+    display: none;
+    margin-block: 1vw;
 
     &__container {
       container: contenidor_contacte / inline-size;
@@ -52,7 +53,7 @@
     }
   }
 
-  @container contenidor_contacte (max-width: 993px) {
+  @container contenidor_contacte (max-width: 993px) and (min-width: 738px) {
     div:is(.contacte__formulari, .contacte__ubicacio) {
       width: 50cqw;
       height: auto;

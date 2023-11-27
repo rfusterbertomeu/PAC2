@@ -1,6 +1,48 @@
 .footer {
+  container: footer / size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $secondary;
+
+  &__seccio {
+    height: 50cqh;
+    padding-inline: 3cqw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-block: 10cqh;
+  }
+
+  &__seccio:first-child {
+    justify-content: center;
+  }
+
+  &__columna {
+    margin-inline: 3cqw;
+  }
+
+  &__llista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__enllac {
+    text-decoration: none;
+    font-weight: bold;
+    color: $secondary;
+  }
+
+  &__enllac:hover {
+    color: $link-hover-color;
+  }
+
   &__imatge {
-    width: 20vw;
+    width: 20cqw;
     height: 100%;
     object-fit: contain;
   }
@@ -14,5 +56,25 @@
   &__seccio--uoc {
     color: #fff;
     background-color: $uoc-corporate;
+  }
+}
+
+@container footer (min-width: 994px) {
+  .footer__llista {
+    gap: 10cqw;
+  }
+}
+
+@container footer (max-width: 993px) and (min-width: 738px) {
+  .footer__llista {
+    gap: 5cqw;
+  }
+}
+
+@container footer (max-width: 737px) {
+  .footer__llista {
+    flex-direction: column;
+    text-align: center;
+    gap: 1cqw;
   }
 }

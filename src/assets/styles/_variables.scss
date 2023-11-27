@@ -11,6 +11,7 @@ $primary: #be9bff;
 $secondary: #4c177a;
 $info: #029b85;
 $subtitle-color: color.adjust(#000, $lightness: 50%);
+$link-hover-color: color.adjust($secondary, $blackness: 80%);
 $bg-color-primary: color.scale($primary, $lightness: 80%);
 $navbar-light-color: $secondary;
 $navbar-light-toggler-border-color: $bg-color-primary;

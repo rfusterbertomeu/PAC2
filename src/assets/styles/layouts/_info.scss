@@ -1,9 +1,9 @@
-.blog {
+.info {
   display: none;
-  container: blog / inline-size;
+  container: info / inline-size;
 
   &__container {
-    container: contenidor_blog / inline-size;
+    container: contenidor_info / inline-size;
     max-width: 75vw;
     margin-inline: 0;
     margin-block: auto;
@@ -39,24 +39,24 @@
 }
 
 @supports (contain: layout) {
-  @container blog (min-width: 994px) {
-    .blog__container {
+  @container info (min-width: 994px) {
+    .info__container {
       width: 50cqw;
     }
   }
 
-  @container blog (min-width: 738px) and (max-width: 993px) {
-    .blog__container {
+  @container info (min-width: 738px) and (max-width: 993px) {
+    .info__container {
       width: 75cqw;
     }
   }
 
-  @container blog (max-width: 737px) {
-    .blog__container {
+  @container info (max-width: 737px) {
+    .info__container {
       width: 90cqw;
     }
 
-    .blog__seccio:first-child {
+    .info__seccio:first-child {
       flex-direction: column;
     }
   }
