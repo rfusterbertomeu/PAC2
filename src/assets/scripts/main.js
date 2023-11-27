@@ -11,7 +11,7 @@ import * as bootstrap from 'bootstrap'
  */
 const enllac_header = document.getElementsByClassName("header__enllac");
 const enllac_portada = document.getElementsByClassName("portada__enllac");
-const enllac_footer = document.getElementsByClassName("footer__enllac");
+const enllac_footer = document.getElementsByClassName("footer__enllac--menu");
 
 Array.from(enllac_header).forEach(function (enllac) {
   enllac.addEventListener('click', function () {
