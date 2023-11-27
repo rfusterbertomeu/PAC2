@@ -23,7 +23,8 @@
     object-fit: contain;
     transform: scaleX(-1);
   }
-  &__enllac{
+
+  &__enllac {
     &--form,&--info {
       padding-inline: 2rem;
       padding-block: 1rem;
@@ -54,6 +55,7 @@
       background: rgb(255 255 255 / 70%);
     }
   }
+
     @container portada (min-width: 1024px) {
       .portada {
       grid-template-columns:
@@ -105,6 +107,7 @@
       }
     }
   }
+
     @container portada (min-width:768px) and (max-width: 1023px) {
       .portada {
       grid-template-columns:
@@ -157,6 +160,7 @@
       }
     }}
   }
+  
     @container portada (max-width: 767px) {
       .portada {
       grid-template-columns: minmax(3em, 1fr) fit-content(10em) minmax(3em, 1fr) minmax(1em, 1fr) fit-content(10em) minmax(
