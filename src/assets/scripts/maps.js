@@ -1,11 +1,25 @@
-//import {Loader, LoaderOptions} from 'google-maps';
-const {Loader} = require('google-maps');
-const options = {"language":"es","region":"ES"};
-const loader = new Loader('AIzaSyDoXC9ryiZUDjDpIrfDOegtTapMpYxPaNM', options);
- 
-loader.load().then(function (google) {
-    const map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8,
-    });
+import { Loader } from '@googlemaps/js-api-loader';
+
+const loader = new Loader({
+    apiKey: "AIzaSyDoXC9ryiZUDjDpIrfDOegtTapMpYxPaNM",
+    version:"weekly",
+    libraries:["places"],
+    language:"es",
+    region:"ES"
 });
+const mapOptions = {
+    center: { 
+        lat: 38.92338, 
+        lng: -0.11310 
+    },
+    zoom: 4
+}
+
+loader.loadCallback(e => {
+    if (e) {
+      console.log(e);
+    } else {
+      console.log( new google.maps.Map(document.getElementById("map"), mapOptions));  
+      new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+  });
