@@ -1,30 +1,19 @@
-import $ from "jquery";
 
-$(document).ready(function () {
-  $(".alert").hide();
-  $("form[name='formulari__contacte']").submit(function (event) {
-    event.preventDefault();
+const handleSubmit = (event) => {
+  event.preventDefault();
 
-    var success = $(".contacte__success");
-    var fail = $(".contacte__fail");
-    console.log(event);
-    console.log(success);
-    $.ajax({
-      url: "/",
-      type: "POST",
-      data: new FormData(event.target)
-    }).done(function () {
-        console.log("success");
-        success.fadeIn();
-        setTimeout(function() {
-          success.fadeOut();
-        }, 2000);
-      }).fail(function (error) {
-        console.log(error);
-        fail.fadeIn();
-        setTimeout(function() {
-          fail.fadeOut();
-        }, 2000);
-      });
-  });
-});
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+  
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => alert("Thank you for your submission"))
+    .catch((error) => alert(error));
+};
+
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
