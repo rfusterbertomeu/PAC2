@@ -3,6 +3,7 @@ import $ from "jquery";
 $(function() {
     
   $(".alert").hide();
+  var formulari = $(".contacte__form")
   var success = $(".contacte__success");
   var fail = $(".contacte__fail");
 
@@ -16,14 +17,18 @@ $(function() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => { success.fadeIn();
-        setTimeout(function() {
-          success.fadeOut();
-        }, 2000);})
-      .catch((error) => { success.fadeIn();
-        setTimeout(function() {
-          fail.fadeOut();
-        }, 2000);});
+    .then(() => { success.fadeIn();
+      setTimeout(function() {
+        success.fadeOut();
+      }, 2000);
+        formulari.trigger("reset");
+    })    
+    .catch((error) => { success.fadeIn();
+      setTimeout(function() {
+        fail.fadeOut();
+      }, 2000);
+      formulari.trigger("reset");
+    });
   };
 
   document
