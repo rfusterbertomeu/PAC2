@@ -2,7 +2,7 @@
   .contacte {
     container: contacte / inline-size;
     display: none;
-    margin-block: 1vw;
+   
 
     &__container {
       container: contenidor_contacte / inline-size;
@@ -10,7 +10,7 @@
       gap: 5cqi;
       width: 75vw;
       margin-inline: 0;
-      margin-block: auto;
+     
       justify-content: space-around;
     }
   }
@@ -27,23 +27,25 @@
     &__formulari {
       display: flex;
       flex-direction: column;
-      height: 100cqh;
+      min-height: 50cqh;
       margin-inline: 0;
       margin-block: auto;
-      align-items: start;
+      align-items: center;
     }
 
     &__ubicacio {
       display: flex;
       flex-direction: column;
-      height: 100cqh;
+      min-height: 50cqh;
       margin-inline: 0;
       margin-block: auto;
-      align-items: start;
+      align-items: center;
     }
 
     &__mapa {
+      display: flex;
       width: 100cqi;
+      justify-content: center;
     }
   }
 
@@ -56,14 +58,14 @@
   @container contenidor_contacte (max-width: 993px) and (min-width: 738px) {
     div:is(.contacte__formulari, .contacte__ubicacio) {
       width: 50cqw;
-      height: auto;
+      min-height:cqmin;
     }
   }
 
   @container contenidor_contacte (max-width: 737px) {
     div:is(.contacte__formulari, .contacte__ubicacio) {
       width: 100cqw;
-      height: auto;
+      height: cqmin;
       justify-content: center;
     }
   }
