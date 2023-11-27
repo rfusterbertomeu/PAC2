@@ -4,19 +4,25 @@ $(document).ready(function () {
   $(".alert").hide();
   $(".formulari__contacte").submit(function (event) {
     event.preventDefault();
+    var success = $(".contacte__success");
+    var fail = $(".contacte__fail");
     $.ajax({
       url: "/",
       type: "POST",
       data: new FormData(this),
-      processData: false,
-      contentType: false,
       success: function () {
-        $(".contacte__success").fadeIn();
-        setTimeout($(".contacte__success").fadeOut(), 2000);
+        console.log("success");
+        success.fadeIn();
+        setTimeout(function() {
+          success.fadeOut();
+        }, 2000);
       },
       error: function (error) {
-        $(".contacte__danger").fadeIn();
-        setTimeout($(".contacte__danger").fadeOut(), 2000);
+        console.log(error);
+        fail.fadeIn();
+        setTimeout(function() {
+          fail.fadeOut();
+        }, 2000);
       }
     });
   });
