@@ -1,7 +1,9 @@
-
+import $ from "jquery";
+$(".alert").hide();
+var success = $(".contacte__success");
+var fail = $(".contacte__fail");
 const handleSubmit = (event) => {
   event.preventDefault();
-
   const myForm = event.target;
   const formData = new FormData(myForm);
   
@@ -10,8 +12,14 @@ const handleSubmit = (event) => {
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    .then(() => alert("Thank you for your submission"))
-    .catch((error) => alert(error));
+    .then(() => { success.fadeIn();
+      setTimeout(function() {
+        success.fadeOut();
+      }, 2000);})
+    .catch((error) => { success.fadeIn();
+      setTimeout(function() {
+        fail.fadeOut();
+      }, 2000);});
 };
 
 document
