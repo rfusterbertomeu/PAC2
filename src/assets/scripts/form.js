@@ -17,16 +17,18 @@ $(function() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-    .then(() => { success.fadeIn();
+    .then(() => { 
+      success.fadeIn();
       setTimeout(function() {
         success.fadeOut();
-      }, 2000);
+      }, 5000);
         formulari.trigger("reset");
     })    
-    .catch((error) => { success.fadeIn();
+    .catch((error) => { 
+      success.fadeIn();
       setTimeout(function() {
         fail.fadeOut();
-      }, 2000);
+      }, 5000);
       formulari.trigger("reset");
     });
   };
