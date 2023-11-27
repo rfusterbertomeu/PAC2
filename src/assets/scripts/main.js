@@ -10,9 +10,16 @@ import * as bootstrap from 'bootstrap'
  * Write any other JavaScript below
  */
 const enllac_header = document.getElementsByClassName("header__enllac");
+const enllac_portada = document.getElementsByClassName("portada__enllac");
 const enllac_footer = document.getElementsByClassName("footer__enllac");
 
 Array.from(enllac_header).forEach(function (enllac) {
+  enllac.addEventListener('click', function () {
+    const target = enllac.getAttribute('data-target');
+    mostra(target);
+  });
+});
+Array.from(enllac_portada).forEach(function (enllac) {
   enllac.addEventListener('click', function () {
     const target = enllac.getAttribute('data-target');
     mostra(target);

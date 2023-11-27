@@ -24,7 +24,11 @@
     flex-direction: row;
     gap: 5cqi;
   }
-
+  
+  &__seccio:has(.info__titol){
+    border-left: 2px solid $secondary;
+  }
+  
   :is(&__seccio, &__llista) {
     margin-block: 1rem;
     padding-inline: 10cqi;

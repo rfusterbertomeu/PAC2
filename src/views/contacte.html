@@ -3,17 +3,19 @@
     <div class="contacte__formulari">
       <h1 class="contacte__titol">Contacta amb nosaltres!</h1>
       <form class="contacte__form" name="contacte__form" action="#" method="post" netlify>
-        <div class="contacte__camp form-floating mb-3">
-          <input type="text" class="form-control" id="form__nom" required>
-          <label for="form__nom">Nom i cognoms</label>
-        </div>
-        <div class="contacte__camp form-floating mb-3">
-          <input type="email" class="form-control" id="form__mail" required>
-          <label for="form__mail">Correu electrònic</label>
+        <div class="contacte__camp mb-3">
+          <label for="form__nom" class="form-label">Nom i cognoms</label>
+          <input type="ematextil" class="form-control" id="form__nom" required>
         </div>
 
-        <div class="contacte__camp form-floating mb-3">
-          <select class="form-select" id="form__select" aria-label="Floating label select example">
+        <div class="contacte__camp mb-3">
+          <label for="form__mail" class="form-label">Correu electrònic</label>
+          <input type="email" class="form-control" id="form__mail" placeholder="exemple@exemple.com" required>
+        </div>
+
+        <div class="contacte__camp mb-3">
+           <label for="form__select" class="form-label"></label>La meua consulta tracta sobre...</label>
+            <select class="form-select" id="form__select" aria-label="Tria una o varies opcions">
             <option selected>Tria una o varies opcions</option>
             <option value="1">Tornejos</option>
             <option value="2">Classes i entrenaments</option>
@@ -21,11 +23,11 @@
             <option value="4">Activitats extra</option>
             <option value="5">Altres..</option>
           </select>
-          <label for="form__select">La meua consulta tracta sobre...</label>
         </div>
-        <div class="contacte__camp form-floating mb-3">
-          <textarea class="form-control" aria-label="Escriu-nos alguna cosa.." id="form__text"></textarea>
-          <label for="form__text">Missatge</label>
+
+        <div class="contacte__camp mb-3">
+          <label for="form__text" class="form-label">Missatge</label>
+          <textarea class="form-control" id="form__text" rows="3"></textarea>
         </div>
         <div class="contacte__camp form-check mb-3">
           <input class="form-check-input" type="checkbox" value="info" id="check__info">

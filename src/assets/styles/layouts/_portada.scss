@@ -23,14 +23,14 @@
     object-fit: contain;
     transform: scaleX(-1);
   }
-
-  &__enllac-form,
-  &__enllac-info {
-    padding-inline: 2rem;
-    padding-block: 1rem;
-    margin-block: 1rem;
-    background: $secondary;
-    color: #fff;
+  &__enllac{
+    &--form,&--info {
+      padding-inline: 2rem;
+      padding-block: 1rem;
+      margin-block: 1rem;
+      background: $secondary;
+      color: #fff;
+    }
   }
 }
 
@@ -40,20 +40,22 @@
     max-width: none;
     display: grid;
 
-    &__enllac-form,
-    &__enllac-info {
+    &__enllac{
+      &--form,&--info {
       padding-block: 1rem;
       padding-inline: 1rem;
       margin-block: 0;
       background: $secondary;
       text-align: center;
+      }
     }
 
     &__text {
       background: rgb(255 255 255 / 70%);
     }
-
+  }
     @container portada (min-width: 1024px) {
+      .portada {
       grid-template-columns:
         1fr fit-content(10em) fit-content(10em) minmax(1em, 1fr) fit-content(15em) minmax(1em, 1fr) minmax(
           10em,
@@ -62,21 +64,21 @@
         calc(2em + 0.5vw);
       grid-template-rows: 3rem repeat(2, 15vh) repeat(2, 10vh) calc(2em + 0.5vh);
 
-      .portada__titol {
+      &__titol {
         grid-column: 4 / 6;
         grid-row: 1 / 2;
         padding-left: 0.25em;
         margin-bottom: initial;
       }
 
-      .portada__subtitol {
+      &__subtitol {
         grid-column: 4 / 6;
         grid-row: 6;
         margin-bottom: initial;
         text-align: center;
       }
 
-      .portada__text {
+      &__text {
         padding-block: 1rem;
         padding-inline: 1rem;
         grid-column: 5 / 6;
@@ -84,24 +86,27 @@
         z-index: 2;
       }
 
-      .portada__imatge {
+      &__imatge {
         grid-column: 6 / 9;
         grid-row: 2 / 7;
         z-index: 1;
       }
 
-      .portada__enllac-form {
-        grid-column: 2 / 3;
-        grid-row: 4;
-      }
+      &__enllac{
+        &--form {
+          grid-column: 2 / 3;
+          grid-row: 4;
+        }
 
-      .portada__enllac-info {
-        grid-column: 3 / 4;
-        grid-row: 5;
+        &--info {
+          grid-column: 3 / 4;
+          grid-row: 5;
+        }
       }
     }
-
+  }
     @container portada (min-width:768px) and (max-width: 1023px) {
+      .portada {
       grid-template-columns:
         calc(2em + 0.5vw) fit-content(10em) fit-content(10em) minmax(3em, 1fr) minmax(1em, 1fr) fit-content(10em)
         minmax(1em, 1fr) calc(2em + 0.5vw);
@@ -112,21 +117,21 @@
         )
         minmax(1em, 1fr);
 
-      .portada__titol {
+      &__titol {
         grid-column: 3 / 8;
         grid-row: 2 / 3;
         padding-left: 0.25em;
         margin-bottom: initial;
       }
 
-      .portada__subtitol {
+      &__subtitol {
         grid-column: 3 / 8;
         grid-row: 8;
         margin-bottom: initial;
         text-align: right;
       }
 
-      .portada__text {
+      &__text {
         padding-block: 1rem;
         padding-inline: 1rem;
         grid-column: 4 / 7;
@@ -134,31 +139,33 @@
         z-index: 2;
       }
 
-      .portada__imatge {
+      &__imatge {
         grid-column: 5 / 8;
         grid-row: 2 / 8;
         z-index: 1;
       }
 
-      .portada__enllac-form {
+      &__enllac{
+        &--form {
         grid-column: 2 / 3;
         grid-row: 5;
       }
 
-      .portada__enllac-info {
+      &--info {
         grid-column: 3 / 4;
         grid-row: 6;
       }
-    }
-
+    }}
+  }
     @container portada (max-width: 767px) {
+      .portada {
       grid-template-columns: minmax(3em, 1fr) fit-content(10em) minmax(3em, 1fr) minmax(1em, 1fr) fit-content(10em) minmax(
           1em,
           1fr
         );
       grid-template-rows: repeat(4, 10vh) minmax(1em, 1fr) fit-content(10em) minmax(2rem, min-content);
 
-      .portada__titol {
+      &__titol {
         grid-column: 2 / 6;
         grid-row: 1;
         padding-left: 0.25em;
@@ -166,7 +173,7 @@
         text-align: center;
       }
 
-      .portada__subtitol {
+      &__subtitol {
         grid-column: 2 / 6;
         grid-row: 6;
         margin-bottom: initial;
@@ -175,7 +182,7 @@
         text-align: center;
       }
 
-      .portada__text {
+      &__text {
         padding-block: 1rem;
         padding-inline: 1rem;
         grid-column: 2 / 6;
@@ -183,23 +190,24 @@
         z-index: 2;
       }
 
-      .portada__imatge {
+      &__imatge {
         grid-column: 3 / 6;
         grid-row: 4 / 7;
         z-index: 1;
       }
 
-      .portada__enllac-form {
+      &__enllac{
+        &--form {
         grid-column: 2;
         grid-row: 2;
         margin-block: 0.1rem;
       }
 
-      .portada__enllac-info {
+      &--info {
         grid-column: 5;
         grid-row: 3;
         margin-block: 0.1rem;
-      }
+      }}
     }
   }
 }
