@@ -53,7 +53,7 @@
     "@googlemaps/js-api-loader": "^1.16.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
-    "google-maps": "^4.3.3",
+    "jquery": "^3.7.1",
     "stylelint": "^15.11.0"
   }
 }

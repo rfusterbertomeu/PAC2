@@ -1,6 +1,76 @@
-.contacte {
-  display: none;
-  &___mapa{
-    height: 100vh;
+@layer base {
+  .contacte {
+    display: none;
+    container: contacte / inline-size;
+
+    &__container {
+      container: contenidor_contacte / inline-size;
+      display: flex;
+      gap: 5cqi;
+      width: 75vw;
+      margin-inline: 0;
+      margin-block: auto;
+      justify-content: space-around;
+    }
+  }
+
+  @container contacte (max-width: 993px) {
+    .contacte__container {
+      flex-direction: column;
+    }
+  }
+}
+
+@layer components {
+  .contacte {
+    &__formulari {
+      display: flex;
+      flex-direction: column;
+      height: 100cqh;
+      margin-inline: 0;
+      margin-block: auto;
+      align-items: start;
+    }
+
+    &__ubicacio {
+      display: flex;
+      flex-direction: column;
+      height: 100cqh;
+      margin-inline: 0;
+      margin-block: auto;
+      align-items: start;
+    }
+
+    &__mapa {
+      width: 100cqi;
+    }
+  }
+
+  @container contenidor_contacte (min-width: 994px) {
+    div:is(.contacte__formulari, .contacte__ubicacio) {
+      width: 50cqw;
+    }
+  }
+
+  @container contenidor_contacte (max-width: 993px) {
+    div:is(.contacte__formulari, .contacte__ubicacio) {
+      width: 50cqw;
+      height: auto;
+    }
+  }
+
+  @container contenidor_contacte (max-width: 737px) {
+    div:is(.contacte__formulari, .contacte__ubicacio) {
+      width: 100cqw;
+      height: auto;
+      justify-content: center;
+    }
+  }
+}
+
+@layer design {
+  .contacte {
+    background-color: $bg-color-primary-p3 !important;
+    color: $secondary-p3 !important;
   }
 }

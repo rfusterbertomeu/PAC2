@@ -3,7 +3,7 @@
   container: blog / inline-size;
 
   &__container {
-    container: contenidor / inline-size;
+    container: contenidor_blog / inline-size;
     max-width: 75vw;
     margin-inline: 0;
     margin-block: auto;
@@ -19,20 +19,20 @@
     text-align: justify;
   }
 
-  &__seccio:first-child{
+  &__seccio:first-child {
     display: flex;
     flex-direction: row;
     gap: 5cqi;
   }
 
-  :is(&__seccio,&__llista ) {
+  :is(&__seccio, &__llista) {
     margin-block: 1rem;
     padding-inline: 10cqi;
   }
 
-  :is(&__capcalera,&__imatge) {
+  :is(&__capcalera, &__imatge) {
     width: 100cqi;
-    height: 100%;
+    height: cqmin;
     object-fit: contain;
     margin-bottom: 15px;
   }
@@ -55,8 +55,8 @@
     .blog__container {
       width: 90cqw;
     }
-    
-    .blog__seccio:first-child{
+
+    .blog__seccio:first-child {
       flex-direction: column;
     }
   }
