@@ -1,11 +1,11 @@
 .footer {
   container: footer / size;
-  height: 30vh;
+  padding-top: 1%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 30vh;
   color: $secondary;
-  padding-top: 1%;
 
   &__separador {
     margin-inline: 25cqi;
@@ -14,19 +14,24 @@
 
   &__seccio {
     container: seccio / size;
-    min-height: 50cqb;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
-  }
+    min-height: 50cqb;
 
-  &__seccio:first-child {
-    justify-content: center;
+    &--uoc {
+      justify-content: space-between;
+      color: #fff;
+      background-color: $uoc-corporate;
+    }
+
+    &:first-child { justify-content: center; }
   }
 
   &__columna {
     margin-inline: 3cqw;
+
     &:has(.footer__imatge) {
       margin-inline: 2cqw;
       width: 30cqi;
@@ -40,21 +45,24 @@
   }
 
   &__llista {
-    list-style: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    list-style: none;
   }
 
   &__enllac {
-    text-decoration: none;
     font-weight: bold;
     color: $secondary;
-  }
+    text-decoration: none;
 
-  &__enllac:hover {
-    color: $link-hover-color;
+    &:hover { color: $link-hover-color; }
+  }
+  
+  &__logo {
+    width: 60px;
+    height: 60px;
   }
 
   &__imatge {
@@ -64,46 +72,33 @@
   }
 
   &__credits {
-    text-align: justify;
     font-weight: bold;
     font-size: 0.7em;
     line-height: 1em;
-  }
-
-  &__seccio--uoc {
-    color: #fff;
-    background-color: $uoc-corporate;
-    justify-content: space-between;
+    text-align: justify;
   }
 }
 
 @container footer (min-width: 994px) {
-  .footer__llista {
-    gap: 10cqw;
-  }
+  .footer__llista { gap: 10cqw; }
 }
 
 @container footer (max-width: 993px) and (min-width: 738px) {
-  .footer__columna {
-    padding-block: 1cqh;
-  }
-
-  .footer__llista {
-    gap: 5cqw;
-  }
+  .footer__columna { padding-block: 1cqh; }
+  .footer__llista  { gap: 5cqw; }
 }
 
 @container footer (max-width: 737px) {
   .footer__llista {
+    gap: 1cqw;
     flex-direction: column;
     text-align: center;
-    gap: 1cqw;
   }
 }
 
 @container seccio (max-height: 125px) {
   .footer__imatge {
-    width: 15cqw;
     margin-block-end: 15cqb;
+    width: 15cqw;
   }
 }

@@ -3,17 +3,17 @@
     display: none;
 
     &__titol {
-      text-align: center;
       font-size: calc(1em + 2vw);
+      text-align: center;
     }
 
     &__contenidor {
       container: participants / inline-size;
-      width: calc(100% - 30px);
       display: flex;
       flex-wrap: wrap;
       gap: 2cqi;
       justify-content: center;
+      width: calc(100% - 30px);
     }
   }
 }
@@ -25,21 +25,15 @@
   }
 
   @container participants (min-width: 994px) {
-    .participant {
-      flex-basis: 30cqw;
-    }
+    .participant { flex-basis: 30cqw; }
   }
 
   @container participants (min-width: 738px) and (max-width: 993px) {
-    .participant {
-      flex-basis: 40cqw;
-    }
+    .participant { flex-basis: 40cqw; }
   }
 
   @container participants (max-width: 737px) {
-    .participant {
-      flex-basis: 100cqw;
-    }
+    .participant { flex-basis: 100cqw; }
   }
 }
 
@@ -47,8 +41,6 @@
   .participant {
     text-align: center;
 
-    &__text {
-      margin-block: 0.5rem !important;
-    }
+    &__text { margin-block: 0.5rem !important; }
   }
 }

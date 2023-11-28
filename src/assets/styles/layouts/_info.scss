@@ -4,64 +4,51 @@
 
   &__container {
     container: contenidor_info / inline-size;
-    max-width: 75vw;
     margin-inline: 0;
     margin-block: auto;
+    max-width: 75vw;
   }
 
   &__titol {
     font-size: calc(1em + 1vw);
-    color: $secondary;
     line-height: 1em;
+    color: $secondary;
   }
 
-  &__text {
-    text-align: justify;
-  }
+  &__text { text-align: justify; }
 
   &__seccio:first-child {
     display: flex;
     flex-direction: row;
     gap: 5cqi;
   }
-  
-  &__seccio:has(.info__titol){
-    border-left: 2px solid $secondary;
-  }
-  
+
+  &__seccio:has(.info__titol) { border-left: 2px solid $secondary; }
+
   :is(&__seccio, &__llista) {
     margin-block: 1rem;
     padding-inline: 10cqi;
   }
 
   :is(&__capcalera, &__imatge) {
+    margin-bottom: 15px;
     width: 100cqi;
     height: cqmin;
     object-fit: contain;
-    margin-bottom: 15px;
   }
 }
 
 @supports (contain: layout) {
   @container info (min-width: 994px) {
-    .info__container {
-      width: 50cqw;
-    }
+    .info__container { width: 50cqw; }
   }
 
   @container info (min-width: 738px) and (max-width: 993px) {
-    .info__container {
-      width: 75cqw;
-    }
+    .info__container { width: 75cqw; }
   }
 
   @container info (max-width: 737px) {
-    .info__container {
-      width: 90cqw;
-    }
-
-    .info__seccio:first-child {
-      flex-direction: column;
-    }
+    .info__container          { width: 90cqw; }
+    .info__seccio:first-child { flex-direction: column; }
   }
 }

@@ -2,77 +2,72 @@
   .contacte {
     container: contacte / inline-size;
     display: none;
-   
 
     &__container {
       container: contenidor_contacte / inline-size;
-      display: flex;
-      gap: 5cqi;
-      width: 75vw;
       margin-inline: 0;
+      display: flex;
       justify-content: space-around;
+      width: 75vw;
+      gap: 5cqi;
     }
   }
 
   @container contacte (max-width: 993px) {
-    .contacte__container {
-      flex-direction: column;
-    }
+    .contacte__container { flex-direction: column; }
   }
 }
 
 @layer components {
   .contacte {
     &__formulari {
-      display: flex;
-      flex-direction: column;
-      min-height: 50cqh;
       margin-inline: 0;
       margin-block: auto;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      min-height: 50cqh;
     }
 
     &__ubicacio {
-      display: flex;
-      flex-direction: column;
-      min-height: 50cqh;
       margin-inline: 0;
       margin-block: auto;
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      min-height: 50cqh;
     }
 
     &__mapa {
       display: flex;
-      width: 100cqi;
       justify-content: center;
+      width: 100cqi;
     }
   }
 
   @container contenidor_contacte (min-width: 994px) {
-    div:is(.contacte__formulari, .contacte__ubicacio) {
-      width: 50cqw;
-    }
+    div:is(.contacte__formulari, .contacte__ubicacio) { width: 50cqw; }
   }
 
   @container contenidor_contacte (max-width: 993px) and (min-width: 738px) {
     div:is(.contacte__formulari, .contacte__ubicacio) {
       width: 50cqw;
-      min-height:cqmin;
+      min-height: cqmin;
     }
   }
 
   @container contenidor_contacte (max-width: 737px) {
     div:is(.contacte__formulari, .contacte__ubicacio) {
+      justify-content: center;
       width: 100cqw;
       height: cqmin;
-      justify-content: center;
     }
   }
 }
 
 @layer design {
   .contacte {
-    background-color: $bg-color-primary-p3 !important;
     color: $secondary-p3 !important;
+    background-color: $bg-color-primary-p3 !important;
   }
 }
