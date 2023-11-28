@@ -13,7 +13,6 @@
   &__seccio {
     container: seccio / inline-size;
     height: 50cqh;
-    padding-inline: 3cqw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -71,10 +70,10 @@
 }
 
 @container footer (max-width: 993px) and (min-width: 738px) {
-  .footer__columna{
+  .footer__columna {
     padding-block: 1cqh;
   }
-  
+
   .footer__llista {
     gap: 5cqw;
   }
@@ -89,13 +88,13 @@
 }
 
 @container seccio (max-width:1230px) and (min-width: 992px) {
-  .footer__columna{
+  .footer__columna {
     margin-inline: 0;
-  
+
     &:has(.footer__imatge) {
       max-width: 40cqi;
     }
-    
+
     &:has(.footer__credits) {
       max-width: 60cqi;
     }
