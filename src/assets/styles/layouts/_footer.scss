@@ -1,22 +1,24 @@
 .footer {
-  container: footer / inline-size;
+  container: footer / size;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: $secondary;
+  padding-top: 1%;
 
   &__separador {
-    margin-inline: 25%;
-    width: 50%;
+    margin-inline: 25cqi;
+    width: 50cqi;
   }
 
   &__seccio {
-    container: seccio / inline-size;
-    height: 50cqh;
+    container: seccio / size;
+    min-height: 50cqb;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   &__seccio:first-child {
@@ -25,6 +27,16 @@
 
   &__columna {
     margin-inline: 3cqw;
+    &:has(.footer__imatge) {
+      margin-inline: 2cqw;
+      width: 30cqi;
+    }
+
+    &:has(.footer__credits) {
+      margin-right: 3cqw;
+      margin-left: 0;
+      width: 70cqi;
+    }
   }
 
   &__llista {
@@ -52,14 +64,16 @@
   }
 
   &__credits {
-    text-align: left;
+    text-align: justify;
     font-weight: bold;
     font-size: 0.7em;
+    line-height: 1em;
   }
 
   &__seccio--uoc {
     color: #fff;
     background-color: $uoc-corporate;
+    justify-content: space-between;
   }
 }
 
@@ -87,16 +101,9 @@
   }
 }
 
-@container seccio (max-width:1230px) and (min-width: 992px) {
-  .footer__columna {
-    margin-inline: 0;
-
-    &:has(.footer__imatge) {
-      max-width: 40cqi;
-    }
-
-    &:has(.footer__credits) {
-      max-width: 60cqi;
-    }
+@container seccio (max-height: 125px) {
+  .footer__imatge {
+    width: 15cqw;
+    margin-block-end: 15cqb;
   }
 }
