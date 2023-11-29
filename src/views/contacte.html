@@ -1,18 +1,18 @@
 <div class="contacte pagina" id="contacte">
-  <div class="contacte__container mt-3">
+  <div class="contacte__contenidor mt-3">
     <div class="contacte__formulari">
       <h1 class="contacte__titol">Contacta amb nosaltres!</h1>
-      <form class="contacte__form" name="contacte__form" method="post" netlify>
-        <div class="contacte__camp mb-3">
+      <form class="form" name="contacte__form" method="post" netlify>
+        <div class="form__camp mb-3">
           <label class="form-label" for="form__nom">Nom i cognoms</label>
           <input class="form-control" id="form__nom" type="ematextil" required>
         </div>
 
-        <div class="contacte__camp mb-3">
+        <div class="form__camp mb-3">
           <label class="form-label" for="form__mail">Correu electrònic</label>
           <input class="form-control" id="form__mail" type="email" placeholder="exemple@exemple.com" required>
         </div>
-        <div class="contacte__camp mb-3">
+        <div class="form__camp mb-3">
           <label class="form-label" for="form__select">La meua consulta tracta sobre...</label>
           <select class="form-select" id="form__select" aria-label="Tria una o varies opcions">
             <option selected>Tria una o varies opcions</option>
@@ -23,21 +23,21 @@
             <option value="5">Altres..</option>
           </select>
         </div>
-        <div class="contacte__camp mb-3">
+        <div class="form__camp mb-3">
           <label class="form-label" for="form__text">Missatge</label>
           <textarea class="form-control" id="form__text" rows="3"></textarea>
         </div>
-        <div class="contacte__camp form-check mb-3">
-          <input class="form-check-input" id="check__info" type="checkbox" value="info">
+        <div class="form__camp form-check mb-3">
+          <input class="form-check-input" id="check__info" type="checkbox" value="1" checked>
           <label class="form-check-label" for="check__info">
             Subscriu-te i reb totes les novetats al correu electrònic!
           </label>
         </div>
-        <button class="contacte__button btn btn-outline-info mb-3" type="submit">Enviar</button>
-        <div class="contacte__alerta contacte__alerta--success alert alert-success" role="alert">
+        <button class="form__button btn btn-outline-info mb-3" type="submit">Enviar</button>
+        <div class="form__alerta form__alerta--success alert alert-success" role="alert">
           Gràcies per contactar amb nosaltres, prompte tindràs notícies!
         </div>
-        <div class="contacte__alerta contacte__alerta--fail alert alert-danger" role="alert">
+        <div class="form__alerta form__alerta--fail alert alert-danger" role="alert">
           Oh, oh, alguna cosa no ha anat bé.. Prova a enviar-ho de nou!
         </div>
       </form>

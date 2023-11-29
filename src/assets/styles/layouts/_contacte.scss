@@ -3,7 +3,7 @@
     container: contacte / inline-size;
     display: none;
 
-    &__container {
+    &__contenidor {
       container: contenidor_contacte / inline-size;
       margin-inline: 0;
       display: flex;
@@ -14,7 +14,7 @@
   }
 
   @container contacte (max-width: 993px) {
-    .contacte__container { flex-direction: column; }
+    .contacte__contenidor { flex-direction: column; }
   }
 }
 

@@ -33,7 +33,6 @@ Array.from(enllac_footer).forEach(function (enllac) {
 });
 
 function mostra(id) {
-  console.log(id);
   document.querySelectorAll('.pagina').forEach(function (pagina) {
     pagina.style.display = 'none';
   });

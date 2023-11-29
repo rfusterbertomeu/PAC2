@@ -2,10 +2,10 @@ import $ from "jquery";
 
 $(function() {
     
-  $(".contacte__alerta").hide();
-  var formulari = $(".contacte__form")
-  var success = $(".ontacte__alerta--success");
-  var fail = $(".ontacte__alerta--fail");
+  $(".form__alerta").hide();
+  var formulari = $(".form")
+  var success = $(".form__alerta--success");
+  var fail = $(".form__alerta--fail");
 
   const handleSubmit = (event) => {
     event.preventDefault();

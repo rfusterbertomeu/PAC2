@@ -2,7 +2,7 @@
   display: none;
   container: info / inline-size;
 
-  &__container {
+  &__contenidor {
     container: contenidor_info / inline-size;
     margin-inline: 0;
     margin-block: auto;
@@ -40,15 +40,15 @@
 
 @supports (contain: layout) {
   @container info (min-width: 994px) {
-    .info__container { width: 50cqw; }
+    .info__contenidor { width: 50cqw; }
   }
 
   @container info (min-width: 738px) and (max-width: 993px) {
-    .info__container { width: 75cqw; }
+    .info__contenidor { width: 75cqw; }
   }
 
   @container info (max-width: 737px) {
-    .info__container          { width: 90cqw; }
+    .info__contenidor         { width: 90cqw; }
     .info__seccio:first-child { flex-direction: column; }
   }
 }
