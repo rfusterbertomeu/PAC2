@@ -1,21 +1,16 @@
 @use "sass:color";
 
-$mq-max-mobile-width: 767px;
-$mq-min-tablet-width: 768px;
-$mq-max-tablet-width: 1023px;
-$mq-min-desktop-width: 1024px;
 $font-title: "Outfit Variable", sans-serif;
 $font-text: "Montserrat Variable", sans-serif;
 $uoc-corporate: #000078;
 $primary: #be9bff;
 $secondary: #4c177a;
 $info: #029b85;
+$bg-color-primary: color.scale($primary, $lightness: 80%);
 $subtitle-color: color.adjust(#000, $lightness: 50%);
 $link-hover-color: color.adjust($secondary, $blackness: 80%);
-$bg-color-primary: color.scale($primary, $lightness: 80%);
 $navbar-light-color: $secondary;
 $navbar-light-toggler-border-color: $bg-color-primary;
-$navbar-light-brand-color: $uoc-corporate;
 $card-title-color: $secondary;
 $list-group-bg: $bg-color-primary;
 $list-group-border-width: 0;
