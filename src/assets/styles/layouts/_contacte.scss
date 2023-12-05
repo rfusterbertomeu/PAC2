@@ -14,7 +14,10 @@
   }
 
   @container contacte (max-width: 993px) {
-    .contacte__contenidor { flex-direction: column; }
+    .contacte__contenidor { 
+      flex-direction: column; 
+      align-items: center;
+    }
   }
 }
 
